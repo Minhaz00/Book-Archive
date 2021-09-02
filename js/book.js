@@ -1,3 +1,4 @@
+// getting container element
 const resultContainer = document.getElementById('result-div');
 const inputField = document.getElementById('search-book');
 
@@ -25,19 +26,19 @@ const showResult = (books) => {
         else {
             coverImg = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`;
         }
-        // Book Author
+        //2. Book Author
         let bookAuthor;
         if (!book.author_name) {
             bookAuthor = ' ';
         } else {
             bookAuthor = `By <span class="text-danger fw-bold">${book.author_name[0]}</span>`;
         }
-        // First pushlish year
+        //3. First pushlish year
         let publishYear = `First published in: ${book.first_publish_year}`;
         if (!book.first_publish_year) {
             publishYear = ' ';
         }
-        // Publisher
+        //4. Publisher
         let publisher;
         if (!book.publisher) {
             publisher = ' ';
@@ -46,7 +47,7 @@ const showResult = (books) => {
             publisher = `Publisher: ${book.publisher[0]}`;
         }
         
-        //Result card
+        //Creating Result div
         const card = document.createElement('div');
         card.classList.add('col');
         card.innerHTML = `

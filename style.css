@@ -1,11 +1,15 @@
-body{
+/* html body */
+body {
     background-color: whitesmoke;
 }
-.fas{
-    font-size:xx-large;
+
+/* font awesome icon */
+.fas {
+    font-size: xx-large;
     color: rgb(212, 7, 7);
 }
 
+/* result images */
 .book-img {
     width: 100%;
     height: 270px;
